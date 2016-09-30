@@ -1,0 +1,13 @@
+For compiled standalone app:
+get pyinstaller
+pyinstaller.exe --onefine --windows C:Path\To\File\python_file.py
+
+for converting qt designer ui files to py:
+pyuic form1.ui > form1.py 
+or
+pyuic4.bat form1.ui > form1.py
+
+for taskbar icon support with ctypes:
+import ctypes
+myappid = 'mycompany.myproduct.subproduct.version' #arbitrary string
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
